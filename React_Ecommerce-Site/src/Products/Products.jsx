@@ -1,18 +1,11 @@
-import Card from '../components/Card';
-import './products.css';
-import React from 'react'
+import "./products.css";
 
-function Products() {
+const Products = ({ result }) => {
   return (
     <>
-    <div className="card-container">
-    <Card />
-    <Card /> 
-    </div>
+      <section className="card-container">{result}</section>
     </>
-    
+  );
+};
 
-  )
-}
-
-export default Products
+export default Products;

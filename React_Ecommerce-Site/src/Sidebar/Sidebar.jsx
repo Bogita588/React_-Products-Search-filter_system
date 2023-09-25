@@ -1,23 +1,21 @@
-import React from 'react'
 import Category from "./Category/Category";
-import Prices from "./Prices/Prices";
+import Price from "./Prices/Prices";
 import Colors from "./Colors/Colors";
 import "./Sidebar.css";
-import './sidebar.css'
 
-function Sidebar() {
+const Sidebar = ({ handleChange }) => {
   return (
-    <div>
-        <section className="sidebar">
+    <>
+      <section className="sidebar">
         <div className="logo-container">
           <h1>🛒</h1>
         </div>
-        <Category />
-        <Prices />
-        <Colors />
+        <Category handleChange={handleChange} />
+        <Price handleChange={handleChange} />
+        <Colors handleChange={handleChange} />
       </section>
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Sidebar
+export default Sidebar;
